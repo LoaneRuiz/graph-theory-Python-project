@@ -16,10 +16,11 @@ The function *exist_cell* checks whether a cell exists within the grid boundarie
 The function *valid_neighbors* returns the list of compatible neighbors of a cell while taking color constraints into account. This method executes in constant time O(1) since it does not depend on the size of the grid.  
 The method *all_pairs*: generates a list of cell pairs that respect color and adjacency constraints.  
 
-Adding the parameter all_duo allows choosing between two options:
-all_duo = True: all existing pairs are generated
-all_duo = False: duplicates are avoided by ensuring that a cell is used only once in a pair.
-This allows the method to be used flexibly, especially for the next steps in solving the problem.
+Adding the parameter *all_duo* allows choosing between two options:  
+    *all_duo* = True: all existing pairs are generated  
+    *all_duo*= False: duplicates are avoided by ensuring that a cell is used only once in a pair.  
+This allows the method to be used flexibly, especially for the next steps in solving the problem.  
+
 We traverse the cells of the grid by focusing on the even cells (i.e., those for which the sum of the coordinates is even) to avoid counting the same pair twice.
 If all_duo = True
 We test the 4 adjacent cells (top, left, bottom, then right) using the pair_color function.
